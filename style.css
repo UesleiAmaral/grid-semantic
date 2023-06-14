@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  font-size: 62.5%;
+  --ff-body: 'Poppins', sans-serif;
+
+  --primary-text-color: rgb(94, 86, 86);
+  --bg-color-header: rgb(231, 98, 154);
+  --bg-color-nav: rgb(92, 175, 92);
+  --bg-color-container: rgb(145, 253, 253);
+  --bg-color-article: rgb(1, 145, 150);
+  --bg-color-figure: rgb(255, 255, 155);
+  --bg-color-p: rgb(196, 196, 50);
+  --bg-color-section: rgb(184, 82, 82);
+  --bg-color-aside: rgb(255, 100, 72);
+  --bg-color-footer: rgb(182, 125, 235);
+}
+
+body {
+  font-family: var(--ff-body);
+  text-align: center;
+  font-size: 3rem;
+  height: 100vh;
+  color: var(--primary-text-color);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px 90px 480px 100px;
+  grid-template-areas:
+    'header header header '
+    'nav nav nav'
+    'aside main main'
+    'footer footer footer';
+}
+
+.header {
+  grid-area: header;
+
+  background-color: var(--bg-color-header);
+}
+
+.nav {
+  grid-area: nav;
+  background-color: var(--bg-color-nav);
+
+}
+
+.container {
+  grid-area: main;
+  background-color: var(--bg-color-container);
+
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+.article {
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: var(--bg-color-article);
+  width: 70%;
+  height: 100%;
+  padding: 4rem 1rem 1rem 1rem;
+
+  gap: 1rem;
+}
+
+.figure {
+  background-color: var(--bg-color-figure);
+
+}
+
+.p {
+  background-color: var(--bg-color-p);
+
+}
+
+.section {
+  background-color: var(--bg-color-section);
+
+}
+
+.aside {
+  grid-area: aside;
+  background-color: var(--bg-color-aside);
+
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--bg-color-footer);
+
+}
+
+.header,
+.nav,
+.container,
+.article,
+.footer,
+.p,
+.section,
+.aside,
+.footer,
+.figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header,
+.nav,
+.container,
+.footer,
+.p,
+.section,
+.aside,
+.footer,
+.figure {
+  width: 100%;
+  height: 100%;
+}
